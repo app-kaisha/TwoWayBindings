@@ -15,14 +15,14 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Press count: \(pressCount)")
-                .font(.title3)
-                .fontWeight(.medium)
+                
             Button("Press Me") {
                 pressCount += 1
             }
             .buttonStyle(.borderedProminent)
         }
-        .padding()
+        .font(.title2)
+       
     }
 }
 
