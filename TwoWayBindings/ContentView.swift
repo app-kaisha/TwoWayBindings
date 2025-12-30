@@ -9,12 +9,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var pressCount = 0
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Press count: \(pressCount)")
+                .font(.title3)
+                .fontWeight(.medium)
+            Button("Press Me") {
+                pressCount += 1
+            }
+            .buttonStyle(.borderedProminent)
         }
         .padding()
     }
